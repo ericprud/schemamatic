@@ -1,0 +1,22 @@
+[package]
+name = "shex2linkml"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+# rudof: Rudof publishes a set of crates; depending on how you pulled rudof you
+# may need to adjust crate names/versions. The example below assumes crates
+# `shex_compact` and `shex_ast` are available (exported by rudof workspace).
+shex_compact = "0.1"
+shex_ast = "0.1"
+iri_s = "0.1"
+url = "2.5.7"
+
+[lib]
+name = "shex2linkml"
+path = "src/lib.rs"
